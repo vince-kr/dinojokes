@@ -9,7 +9,8 @@ public class Dinojokes {
     }
 
     private static void jokeLoop() {
-        String askInput = "Press enter to see another dino joke, or 'q' then enter to quit: ";
+        String askInput 
+            = "Press enter to see another dino joke, or 'q' then enter to quit";
         Scanner in = new Scanner(System.in);
         String userInput;
         do {
@@ -22,8 +23,7 @@ public class Dinojokes {
 
     private static String randomJoke() {
         List<String> jokeList = Dinojokes.hilarity;
-        Random random = new Random();
-        int randomIndex = random.nextInt(jokeList.size());
+        int randomIndex = new Random().nextInt(jokeList.size());
         return jokeList.get(randomIndex) + "\n";
     }
 
